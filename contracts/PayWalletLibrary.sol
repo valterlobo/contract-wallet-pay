@@ -7,7 +7,6 @@ import "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
 import "@openzeppelin/contracts/utils/Address.sol";
 
 library PayWalletLibrary {
-
     using ECDSA for bytes32;
     using Address for address;
 
@@ -15,7 +14,10 @@ library PayWalletLibrary {
     error NotSigner(address signer, bytes hash, bytes signature);
     error TransactionExist(uint256 id);
     error TransactionNotExist(uint256 id);
-
+    error InsufficientBalance(address adr, uint256 amount);
+    error TransactionFinish(uint256 id);
+    error TransactionNotCard(address cardAddr);
+    error InvalidCode(uint256 id, bytes code);
 
     enum StateTransaction {
         START,
@@ -25,25 +27,23 @@ library PayWalletLibrary {
     }
 
     struct Transaction {
-        uint256 id; 
+        uint256 id;
         address to;
         address tokenAddress;
         uint value;
         bytes message;
         bytes signature;
-        bytes signatureSeller; 
-        StateTransaction state; 
-        uint256 timeExecuted; 
+        bytes signatureSeller;
+        StateTransaction state;
+        uint256 timeExecuted;
     }
 
     function recoverSigner(
         bytes memory message,
         bytes memory signature
     ) public pure returns (address) {
-
         bytes32 ethMesgHash = MessageHashUtils.toEthSignedMessageHash(message);
         address receivedAddress = ECDSA.recover(ethMesgHash, signature);
         return receivedAddress;
-
     }
 }

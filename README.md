@@ -1,5 +1,13 @@
 # WALLET PAY - POC CONTRATO PARA MICROPAGAMENTOS
 
+Os contratos Solidity para a "Pay Wallet" é uma prova de conceito simples para micropagamentos.
+
+Ele permite que os usuários depositem fundos, realizem micropagamentos e retirem seus saldos.
+
+O contrato inclui funções para depositar, realizar micropagamentos e retirar fundos, juntamente com eventos para registrar atividades na blockchain. A segurança é enfatizada, incorporando verificações de estado, modos de visibilidade adequados. 
+
+
+
 ## Secure Ether Transfer
 <https://fravoll.github.io/solidity-patterns/secure_ether_transfer.html>
 
