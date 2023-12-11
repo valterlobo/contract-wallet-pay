@@ -185,14 +185,11 @@ describe("PayWallet", function () {
 
 
             const balanceToken = await mockToken.balanceOf(payWallet.getAddress())
-            
+
             console.log(balanceToken)
 
-         
+            await payWallet.connect(owner).withdraw(balanceToken, await mockToken.getAddress())
 
-
-           await  payWallet.connect(owner).withdraw(balanceToken,  await mockToken.getAddress())
-          
             const balanceTokenOwner = await mockToken.balanceOf(owner.getAddress())
             console.log(balanceTokenOwner)
 

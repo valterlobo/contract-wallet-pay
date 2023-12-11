@@ -4,11 +4,12 @@ Os contratos Solidity para a "Pay Wallet" é uma prova de conceito simples para 
 
 Ele permite que os usuários depositem fundos, realizem micropagamentos e retirem seus saldos.
 
-O contrato inclui funções para depositar, realizar micropagamentos e retirar fundos, juntamente com eventos para registrar atividades na blockchain. A segurança é enfatizada, incorporando verificações de estado, modos de visibilidade adequados. 
+O contrato inclui funções para depositar, realizar micropagamentos e retirar fundos, juntamente com eventos para registrar atividades na blockchain.
 
-
+A segurança é enfatizada, incorporando verificações de estado, modos de visibilidade adequados.
 
 ## Secure Ether Transfer
+
 <https://fravoll.github.io/solidity-patterns/secure_ether_transfer.html>
 
 ENDEREÇO PARA OS TESTES MUMBAI = 0x671Fe6fFC5b6552364Ed4576D8C807Aba578Ad5D
@@ -21,6 +22,9 @@ ENDEREÇO PARA OS TESTES MUMBAI = 0x671Fe6fFC5b6552364Ed4576D8C807Aba578Ad5D
 - Examples 3074 - <https://gist.github.com/adietrichs/ab69fa2e505341e3744114eda98a05ab>
 - Secure Ether Transfer - <https://fravoll.github.io/solidity-patterns/secure_ether_transfer.html>
 - Reentrancy vulnerabilities
+- index transactions
+- add events.
+- review security
 
 # Regras
 
