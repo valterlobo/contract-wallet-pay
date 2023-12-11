@@ -12,7 +12,7 @@ contract PayWallet is Ownable {
     bytes private cardCode;
     address private cardKey;
     mapping(uint256 => PayWalletLibrary.Transaction) public transactions;
-    uint256[] idxTransactions; //TODO IDX ID transactions 
+    uint256[] idxTransactions; //TODO IDX ID transactions
 
     constructor(
         bytes memory hashCode,
@@ -160,7 +160,7 @@ contract PayWallet is Ownable {
     }
 
     function withdraw(uint256 amount, address tokenAddress) external onlyOwner {
-        if (IERC20(tokenAddress).balanceOf(address(this)) >= amount) {
+        if (IERC20(tokenAddress).balanceOf(address(this)) > amount) {
             revert PayWalletLibrary.InsufficientBalance(tokenAddress, amount);
         }
         IERC20(tokenAddress).safeTransfer(msg.sender, amount);

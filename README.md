@@ -20,6 +20,7 @@ ENDEREÇO PARA OS TESTES MUMBAI = 0x671Fe6fFC5b6552364Ed4576D8C807Aba578Ad5D
 - EIP 3074 - <https://blog.mycrypto.com/eip-3074>
 - Examples 3074 - <https://gist.github.com/adietrichs/ab69fa2e505341e3744114eda98a05ab>
 - Secure Ether Transfer - <https://fravoll.github.io/solidity-patterns/secure_ether_transfer.html>
+- Reentrancy vulnerabilities
 
 # Regras
 
